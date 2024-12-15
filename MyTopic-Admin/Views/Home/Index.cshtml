@@ -1,0 +1,21 @@
+﻿
+
+<div style="border: 1px solid black; width: 400px; padding: 10px;">
+    <!-- Add Section -->
+    <div>
+        <form method="post" action="/Topics/AddTopic" style="display: flex; align-items: center; gap: 10px;">
+            <input type="text" name="topicName" placeholder="Add Topic" style="width: 70%; padding: 5px;" required>
+            <button type="submit" style="padding: 5px;">Add</button>
+        </form>
+    </div>
+
+    <!-- Topic List Section -->
+    <div style="margin-top: 20px; border: 1px solid black; padding: 10px; height: 200px; overflow-y: auto;">
+        <ul>
+            @foreach (var topic in Model)
+            {
+                <li>@topic.Name</li>
+            }
+        </ul>
+    </div>
+</div>
